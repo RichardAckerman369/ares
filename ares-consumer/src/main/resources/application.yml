@@ -1,0 +1,66 @@
+spring:
+  profiles:
+    active: consumer-21111
+---
+server:
+  port: 21111
+spring:
+  profiles: consumer-21111
+  application:
+    name: ares-consumer
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-consumer-01
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ares-consumer
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+---
+server:
+  port: 22222
+spring:
+  profiles: consumer-22222
+  application:
+    name: ares-consumer
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-consumer-02
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ares-consumer
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+---
+server:
+  port: 23333
+spring:
+  profiles: consumer-23333
+  application:
+    name: ares-consumer
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-consumer-03
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ares-consumer
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

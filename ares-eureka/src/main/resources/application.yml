@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: eureka-7777
+---
+server:
+  port: 7777
+spring:
+  profiles: eureka-7777
+eureka:
+  instance:
+    hostname: eureka7777.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka8888.com:8888/eureka/,http://eureka9999.com:9999/eureka/
+---
+server:
+  port: 8888
+spring:
+  profiles: eureka-8888
+eureka:
+  instance:
+    hostname: eureka8888.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka/,http://eureka9999.com:9999/eureka/
+---
+server:
+  port: 9999
+spring:
+  profiles: eureka-9999
+eureka:
+  instance:
+    hostname: eureka9999.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka/,http://eureka8888.com:8888/eureka/
