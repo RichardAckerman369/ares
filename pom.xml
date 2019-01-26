@@ -12,6 +12,7 @@
         <module>ares-model</module>
         <module>ares-eureka</module>
         <module>ares-consumer</module>
+        <module>ares-consumer-feign</module>
     </modules>
     <packaging>pom</packaging>
 
