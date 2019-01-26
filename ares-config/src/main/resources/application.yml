@@ -1,0 +1,12 @@
+server:
+  port: 11000
+spring:
+  application:
+    name: ares-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:clown-coding/ares-configuration.git
+          username: clown-coding
+          password: ljy123852
