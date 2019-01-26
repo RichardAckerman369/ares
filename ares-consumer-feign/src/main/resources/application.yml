@@ -1,0 +1,66 @@
+spring:
+  profiles:
+    active: consumer-feign-24444
+---
+server:
+  port: 24444
+spring:
+  profiles: consumer-feign-24444
+  application:
+    name: ares-consumer-feign
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-consumer-feign-01
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ares-consumer-feign
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+---
+server:
+  port: 25555
+spring:
+  profiles: consumer-feign-25555
+  application:
+    name: ares-consumer-feign
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-consumer-feign-02
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ares-consumer-figen
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+---
+server:
+  port: 26666
+spring:
+  profiles: consumer-feign-26666
+  application:
+    name: ares-consumer-feign
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-consumer-feign-03
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ares-consumer-feign
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
