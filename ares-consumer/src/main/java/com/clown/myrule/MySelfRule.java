@@ -1,7 +1,6 @@
 package com.clown.myrule;
 
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RoundRobinRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,7 +16,7 @@ public class MySelfRule {
     @Bean
     public IRule myRule(){
 //        return new RandomRule();
-        return new RoundRobinRule();
-//        return new MyRandomRule(); //自定义的Rule,每台机器5次
+//        return new RoundRobinRule();
+        return new MyRandomRule(); //自定义的Rule,每台机器5次
     }
 }

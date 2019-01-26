@@ -14,7 +14,7 @@ import java.util.List;
  **/
 @RestController
 @RequestMapping("/consumer/department")
-public class ConsumerController {
+public class DepartmentController {
 
     private static final String REST_URL_PREFIX = "http://ARES-PROVIDER/department";
 

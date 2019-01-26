@@ -69,8 +69,4 @@ public class ConfigBean {
     public IRule my(){
         return new ZoneAvoidanceRule();
     }*/
-
-    /**
-     * 自定义Ribbon算法
-     */
 }
