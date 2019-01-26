@@ -13,6 +13,7 @@
         <module>ares-eureka</module>
         <module>ares-consumer</module>
         <module>ares-consumer-feign</module>
+        <module>ares-provider-hystrix</module>
     </modules>
     <packaging>pom</packaging>
 
