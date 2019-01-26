@@ -15,6 +15,7 @@
         <module>ares-consumer-feign</module>
         <module>ares-provider-hystrix</module>
         <module>ares-consumer-hystrix-dashboard</module>
+        <module>ares-zuul</module>
     </modules>
     <packaging>pom</packaging>
 
