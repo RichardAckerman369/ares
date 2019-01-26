@@ -1,0 +1,108 @@
+spring:
+  profiles:
+    active: provider-hystrix-14444
+---
+server:
+  port: 14444
+#数据库配置
+spring:
+  profiles: provider-hystrix-14444
+  application:
+    name: ares-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud-zeus-db01?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: '123456'
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-provider-hystrix-01
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ${spring.application.name}
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+#mybatis开启二级缓存与驼峰命名配置
+mybatis:
+  configuration:
+    cache-enabled: true
+#打印SQL语句
+logging:
+  level:
+    com.clown.ares.mapper: debug
+---
+server:
+  port: 15555
+#数据库配置
+spring:
+  profiles:   provider-hystrix-15555
+  application:
+    name: ares-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud-zeus-db02?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: '123456'
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-provider-hystrix-02
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ${spring.application.name}
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+#mybatis开启二级缓存与驼峰命名配置
+mybatis:
+  configuration:
+    cache-enabled: true
+#打印SQL语句
+logging:
+  level:
+    com.clown.ares.mapper: debug
+---
+server:
+  port: 16666
+#数据库配置
+spring:
+  profiles:   provider-hystrix-16666
+  application:
+    name: ares-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud-zeus-db03?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: '123456'
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka,http://eureka8888.com:8888/eureka,http://eureka9999.com:9999/eureka
+  instance:
+    instance-id: ares-provider-hystrix-03
+    prefer-ip-address: true
+# info信息
+info:
+  app.name: ${spring.application.name}
+  company.name: www.clown.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+#mybatis开启二级缓存与驼峰命名配置
+mybatis:
+  configuration:
+    cache-enabled: true
+#打印SQL语句
+logging:
+  level:
+    com.clown.ares.mapper: debug
