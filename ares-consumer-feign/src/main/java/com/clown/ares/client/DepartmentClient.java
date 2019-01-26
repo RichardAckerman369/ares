@@ -1,12 +1,13 @@
 package com.clown.ares.client;
 
+import com.clown.ares.client.impl.DepartmentClientFallBackMethod;
 import com.clown.ares.entity.Department;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(value = "ARES-PROVIDER")
+@FeignClient(value = "ARES-PROVIDER",fallback = DepartmentClientFallBackMethod.class)
 public interface DepartmentClient {
     @GetMapping("/department/findAll")
     List<Department> findAll();
