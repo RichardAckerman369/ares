@@ -16,6 +16,7 @@
         <module>ares-provider-hystrix</module>
         <module>ares-consumer-hystrix-dashboard</module>
         <module>ares-zuul</module>
+        <module>ares-config</module>
     </modules>
     <packaging>pom</packaging>
 
