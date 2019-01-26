@@ -16,6 +16,10 @@ eureka:
   instance:
     instance-id: ares-consumer-feign-01
     prefer-ip-address: true
+# hystrix配置,开启方法降级
+feign:
+  hystrix:
+    enabled: true
 # info信息
 info:
   app.name: ares-consumer-feign
@@ -37,6 +41,10 @@ eureka:
   instance:
     instance-id: ares-consumer-feign-02
     prefer-ip-address: true
+#hystrix配置,开启方法降级
+feign:
+  hystrix:
+    enabled: true
 # info信息
 info:
   app.name: ares-consumer-figen
@@ -58,6 +66,10 @@ eureka:
   instance:
     instance-id: ares-consumer-feign-03
     prefer-ip-address: true
+#hystrix配置,开启方法降级
+feign:
+  hystrix:
+    enabled: true
 # info信息
 info:
   app.name: ares-consumer-feign
