@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: provider-13333
+    active: provider-11111
 ---
 server:
   port: 11111
