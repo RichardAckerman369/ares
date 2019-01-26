@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(value = "ARES-PROVIDER")
+//@FeignClient(value = "ARES-PROVIDER")
+@FeignClient(value = "ARES-PROVIDER",fallbackFactory = DepartmentClientServiceFallBackMethod.class)
 public interface DepartmentClientService {
 
     @GetMapping("/department/findAll")
