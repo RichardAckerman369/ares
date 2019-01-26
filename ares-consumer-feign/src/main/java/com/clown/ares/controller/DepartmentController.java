@@ -24,37 +24,37 @@ public class DepartmentController {
 
     @GetMapping("/findAll")
     public List<Department> findAll(){
-//        return departmentClientService.findAll();
         return departmentClient.findAll();
+//        return departmentClientService.findAll();
     }
 
     @GetMapping("/findById/{departmentId}")
     public Department findById(@PathVariable("departmentId") Long departmentId){
-//        return departmentClientService.findById(departmentId);
         return departmentClient.findById(departmentId);
+//        return departmentClientService.findById(departmentId);
     }
 
     @PostMapping("/add")
     public String add(@RequestBody Department department){
-//        return departmentClientService.add(department);
         return departmentClient.add(department);
+//        return departmentClientService.add(department);
     }
 
     @PutMapping("/update")
     public String update(@RequestBody Department department){
-//        return departmentClientService.update(department);
         return departmentClient.update(department);
+//        return departmentClientService.update(department);
     }
 
     @DeleteMapping("/delete/{departmentId}")
     public String delete(@PathVariable("departmentId") Long departmentId){
-//        return departmentClientService.delete(departmentId);
         return departmentClient.delete(departmentId);
+//        return departmentClientService.delete(departmentId);
     }
 
     @GetMapping("/discovery")
     public Object discovery(){
-//        return departmentClientService.discovery();
         return departmentClient.discovery();
+//        return departmentClientService.discovery();
     }
 }
